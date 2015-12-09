@@ -75,10 +75,20 @@ function winner(){//determine the winning conditions
 		document.getElementById("btn5").value == "O" &&
 		document.getElementById("btn7").value == "O"
 		){
+		// http://www.webdeveloper.com/forum/showthread.php?226907-need-a-simple-script-for-count-up-counter
+			var counter = 0;//set this to what ever you want the start # to be
+			countUP ();//call the function once	
+
+			function countUP (winner) {
+			counter++;//increment the counter by 1
+			setTimeout ( "countUP()", 1000 );//runs itsself after 1000 miliseconds
+			//console.log(counter);uncomment to can see it in action, only with firebug
+			}
 			alert(p2 + " WINS!!");
 			reset();//manually refresh the page
 		}
-
+		
+			
 		}
 
 function reset(){
