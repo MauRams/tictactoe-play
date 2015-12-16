@@ -1,6 +1,7 @@
+	var p1 = "Player 1";
+	var p2 = "Player 2";
 	
 	var player = 1;//set player
-
 
 	function clickBtn(btn){//action for when button is clicked
 
@@ -8,6 +9,7 @@
 		document.getElementById(btn).value = "X";
 		document.getElementById(btn).style.color="blue";
 		document.getElementById(btn).disabled = "disabled";
+		
 		player -=1;
 		winner();
 	}else{
@@ -19,9 +21,9 @@
 	}
 };
 
-function winner(){//determine the winning conditions 
-	var p1 = "Player 1"
-	var p2 = "Player 2"
+function winner(winner){//determine the winning conditions 
+
+	
 	if(document.getElementById("btn1").value == "X" &&
 		document.getElementById("btn2").value == "X" &&
 		document.getElementById("btn3").value == "X" ||
@@ -74,61 +76,37 @@ function winner(){//determine the winning conditions
 		document.getElementById("btn3").value == "O" &&
 		document.getElementById("btn5").value == "O" &&
 		document.getElementById("btn7").value == "O"
-		){
-		// http://www.webdeveloper.com/forum/showthread.php?226907-need-a-simple-script-for-count-up-counter
-			var counter = 0;//set this to what ever you want the start # to be
-			countUP ();//call the function once	
-
-			function countUP (winner) {
-			counter++;//increment the counter by 1
-			setTimeout ( "countUP()", 1000 );//runs itsself after 1000 miliseconds
-			//console.log(counter);uncomment to can see it in action, only with firebug
-			}
-			alert(p2 + " WINS!!");
+		){	alert(p2 + " WINS!!");
 			reset();//manually refresh the page
-		}
-		
 			
 		}
-
-function reset(){
-		location.reload();//reload page
-	}
-
-
-//players object
-var model = {
-	players : [
-		{
-			name: "Player 2",
-			symbol: "X",
-			field:[]
-		
-		},
-		{
-			name: "Player 2",
-			symbol: "O",
-			field:[]
+		// if(winner(winner)){
+		// countScore();
+		// }
 		}
-		],
 		
-	turn_no: 0,
-	current_player: {},
-	winLines: [[1,2,3], [4,5,6], [7,8,9],
-				[1,4,7], [2,5,8],[3,6,9],
-				[1,5,9], [7,5,3]
-				],
-	nextTurn: function(){
-		model: current_player = model.players(turn_no%2);
-		model.turn_no +=1;
-	},
-	
-	isWinner: function(){
-		for(var l = model.winLines.length; i--;){
-			if(3 ===model.winLines[1].intersect(fields).length){
-				throw (model.current_player.name + " wins!")
-			}
-		}
-	}
-}
+		//how to count the wins of each player? Set up logic for game is in conflict with this function
+		
+		// 	function countScore(win){
+					
+		// 		var wins = 0;
+		// 		if(win === p1 ){
+		// 		wins +=1;
+		// 		document.getElementById('#p1').innerHTML = wins;
+				
+			
+		// 	}else if(win === p2){
+		// 		wins +=1;
+		// 		document.getElementById('#p2').innerHTML = wins;
+		// 	}
+		// }
+			
+			
 
+
+function reset(btn){
+		
+		location.reload();
+		// $('btn').reload();
+
+	}

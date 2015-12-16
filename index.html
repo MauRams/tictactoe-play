@@ -11,19 +11,10 @@ Agustinus Bambang Eko Mulyono  -->
     <meta name="viewport" content="width=device-width, initial-scale=1">	
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<link rel = "stylesheet" href = "style.css"/>
 	<script src = "ticScript.js"></script>
 	<script type="text/javascript" src = "fade.js"></script>
-	
-	// <script type="text/javascript">
-	$(document).ready(function(btn){
-		$('.button').click(function(){//fade in X/O
-			$('.button').innerHTML.fadeIn(200);
-		});
-	});
-		
-	</script>
 </head>
 <body>		
 	<div class = "container-fluid">
@@ -42,75 +33,61 @@ Agustinus Bambang Eko Mulyono  -->
 	<div class = "container">
 				<div id = "box" class ="container-fluid">
 					<div class = "row">
-						<div class = "col-md-4">
 							<div id="box1">
 								<input type="button" id= "btn1" class="button" onclick="clickBtn('btn1')"/>
 							</div>
-						</div>
-						<div class = "col-md-4">
 							<div id="box2">
 								<input type="button" id= "btn2" class="button" onclick="clickBtn('btn2')"/>
 							</div>
-						</div>
-						<div class = "col-md-4">
 							<div id="box3">
 								<input type="button" id= "btn3" class="button" onclick="clickBtn('btn3')"/>
 							</div>
-						</div>
 					</div>
 					<div class = "row">
-						<div class = "col-md-4">
 							<div id="box4">
 								<input type="button" id= "btn4" class="button" onclick="clickBtn('btn4')"/>
 							</div>
-						</div>
-						<div class = "col-md-4">
 							<div id="box5">
 								<input type="button" id= "btn5" class="button" onclick="clickBtn('btn5')"/>
 							</div>
-						</div>
-						<div class = "col-md-4">
 							<div id="box6">
 								<input type="button" id= "btn6" class="button" onclick="clickBtn('btn6')"/>
 							</div>
-						</div>
 					</div>
 					<div class = "row">
-						<div class = "col-md-4">
 							<div id="box7">
 								<input type="button" id= "btn7" class="button" onclick="clickBtn('btn7')"/>
 							</div>
-						</div>
-						<div class = "col-md-4">
 							<div id="box8">
 								<input type="button" id= "btn8" class="button" onclick="clickBtn('btn8')"/>
 							</div>
-						</div>
-						<div class = "col-md-4">
 							<div id="box9">
 								<input type="button" id= "btn9" class="button" onclick="clickBtn('btn9')"/>
 							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 			<!-- end of tic tac toe game -->
-			<div class = "container-fluid">
-				<div class = "row">
-				</div>
-			</div>
 			<div class = "container">
 
 				<div class = "row">
-					<div class = "col-md-4">
-					</div>
-					
-					<div class = "col-md-4">
-						<input type = "reset" class = "btn" onclick = "reset()"/>
-					</div>
+						<div class = "col-md-4">
+							
+						<span><input type = "reset" id= "newGame" class = "btn-reset" onclick = "reset()"/></span>
 
-					<div class = "col-md-4">
-					</div>
+							
+						</div>
+						<div class = "col-md-4">
+							
+						<p>Player One Wins : </p><span id ="p1"></span>
+							
+						</div>
+						<div class = "col-md-4">
+							
+						<p>Player Two Wins : </p><span id ="p2"></span>
+
+							
+						</div>
 				</div>
 			</div>
 </body>
