@@ -95,4 +95,40 @@ function reset(){
 		location.reload();//reload page
 	}
 
+
+//players object
+var model = {
+	players : [
+		{
+			name: "Player 2",
+			symbol: "X",
+			field:[]
+		
+		},
+		{
+			name: "Player 2",
+			symbol: "O",
+			field:[]
+		}
+		],
+		
+	turn_no: 0,
+	current_player: {},
+	winLines: [[1,2,3], [4,5,6], [7,8,9],
+				[1,4,7], [2,5,8],[3,6,9],
+				[1,5,9], [7,5,3]
+				],
+	nextTurn: function(){
+		model: current_player = model.players(turn_no%2);
+		model.turn_no +=1;
+	},
 	
+	isWinner: function(){
+		for(var l = model.winLines.length; i--;){
+			if(3 ===model.winLines[1].intersect(fields).length){
+				throw (model.current_player.name + " wins!")
+			}
+		}
+	}
+}
+
